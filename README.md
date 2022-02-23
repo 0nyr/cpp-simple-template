@@ -1,6 +1,6 @@
 # C++ simple template
 
-> This is a simple C++ project template. Great for starting a simple project with the bare minimals. Made for `VSCode
+> This is a simple C++ project template. Great for starting a simple project with the bare minimals. Made for `VSCode`
 
 It includes:
 
@@ -8,14 +8,11 @@ It includes:
 * a project structure
 * `.vscode` folder with the necessary config files to use VSCode code correction and the integrated GDB debugger.
 
-
-
 ### VSCode extentions
 
-If you use `VSCode`, this 
+If you use `VSCode`, this
 
 * `ms-vscode.cpptools`: extention comming with GDB debugger integration.
-
 
 ## Getting Started
 

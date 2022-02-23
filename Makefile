@@ -25,7 +25,7 @@ OBJS=$(SRCS:src/%.cpp=obj/%.o)
 # targets
 # set default target : https://stackoverflow.com/questions/2057689/how-does-make-app-know-default-target-to-build-if-no-target-is-specified
 .DEFAULT_GOAL := default
-.PHONY: default build clean run rebuild all what dirs
+.PHONY: default build clean run rebuild rr ww dirs clear
 
 default: build
 
@@ -54,15 +54,18 @@ rebuild:
 	@$(MAKE) -f $(THIS_FILE) clean
 	@$(MAKE) -f $(THIS_FILE) build
 
-all: 
+rr: # rebuild and rerun
 	@$(MAKE) -f $(THIS_FILE) clean
 	@$(MAKE) -f $(THIS_FILE) build
 	@$(MAKE) -f $(THIS_FILE) run
 
-what:
+ww: # where and what
 	pwd
 	ls -alt
 
 dirs:
 	mkdir -p bin/
 	mkdir -p obj/
+
+clear: # alias of clean
+	@$(MAKE) -f $(THIS_FILE) clean
